@@ -4,21 +4,38 @@ from data import dataset
 #   Викликати функцію
 
 
-def addUserProduct(user_name, product_name, product_price):
+def addUserProduct(dataset,number, competition, mark):
     #TODO
+    if number in list(dataset.keys()):
+        if dataset['number'] != competition:
+            dataset['number']=competition
+            dataset['number']['competition'] = mark
+        else:
+            if dataset['number']['competition'] == mark:
+                return
+            else:
+                dataset['number']['competition'] = mark
+    else:
+        dataset = [number]
+        print(dataset.keys())
+        dataset[number] = competition
+        dataset[number][competition] = mark
+
+
+
 
 
 
 print("Task 1")
 
 #Додати нового користувача та нову покупку
-addUserProduct(?,?,?)
+addUserProduct(dataset,'DD-5555','som a',[34])
 
 #Додати існуючому користувачу нову покупку нового продукту
-addUserProduct(?,?,?)
+addUserProduct(dataset,'GI-8878','jui',[78])
 
 #Додати існуючому користувачу нову покупку існуючого продукту
-addUserProduct(?,?,?)
+addUserProduct(dataset,'UU-7879','olo',[67])
 
 print(dataset)
 

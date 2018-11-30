@@ -3,9 +3,9 @@ from data import dataset
 
 #    Створити пакет validators та написати функції, що валідують усі дані. Імпорутвати дані функції.
 
-from validators.lib import ?
-?
-?
+from validators.lib import getNumber
+from validators.lib import getCompetitionName
+from validators.lib import getMark
 
 
 from task1 import addUserProduct
@@ -15,16 +15,15 @@ from task1 import addUserProduct
 #   Усі дані вводить користувач. Використати валідатори. Викликати функцію
 
 def addUserProductValidator():
-    #TODO
-    ? = getUserEmail()
+    #get names
+    number = getNumber()
+
+    competition_name = getCompetitionName()
+
+    mark= getMark()
 
 
-    ? = getProductName()
-
-    ? = getProductPrice()
-
-
-    addUserProduct(?, ?, ?)
+    addUserProduct(number,competition_name,mark)
 
 
 
