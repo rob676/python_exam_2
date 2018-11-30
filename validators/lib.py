@@ -13,7 +13,7 @@ def getNumber():
     if (re.match(r"\w{2}\-\d{4}", user_input) ):
         return user_input
     else:
-        return False
+        return getNumber()
 
 
 """

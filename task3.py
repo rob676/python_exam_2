@@ -7,7 +7,7 @@ from task1 import addUserProduct
 
 
 #product_list - словник з dataset, що зберігає товар та список його покупок (цін)
-def recursionByProducts(user_email, product_list, amount_of_money = 0):
+def recursionByProducts(name,competition, amount_of_marks = 0):
     #TODO
 
 

@@ -4,22 +4,21 @@ from data import dataset
 #   Викликати функцію
 
 
-def addUserProduct(dataset,number, competition, mark):
+def addUserProduct(dataset ,number, competition, mark):
     #TODO
-    if number in list(dataset.keys()):
-        if dataset['number'] != competition:
-            dataset['number']=competition
-            dataset['number']['competition'] = mark
+    if number in dataset:
+        if competition in dataset[number]  :
+            dataset[number][competition] = mark
+
         else:
-            if dataset['number']['competition'] == mark:
-                return
-            else:
-                dataset['number']['competition'] = mark
+            dataset[number][competition].append(mark)
+
     else:
-        dataset = [number]
-        print(dataset.keys())
-        dataset[number] = competition
-        dataset[number][competition] = mark
+        dataset[number]=dict()
+        dataset[number][competition]=[mark]
+
+
+
 
 
 
