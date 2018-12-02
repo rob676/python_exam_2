@@ -23,7 +23,7 @@ def addUserProductValidator():
     mark= getMark()
 
 
-    addUserProduct(number,competition_name,mark)
+    addUserProduct(dataset,number,competition_name,mark)
 
 
 

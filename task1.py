@@ -15,7 +15,7 @@ def addUserProduct(dataset ,number, competition, mark):
 
     else:
         dataset[number]=dict()
-        dataset[number][competition]=[mark]
+        dataset[number][competition]=mark
 
 
 

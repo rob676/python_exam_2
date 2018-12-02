@@ -6,11 +6,12 @@ import plotly.graph_objs as go
 
 
 #Вивести кругову діаграму: якого товару на яку суму продано.
+data = dict(recursionByAutomobiles())
+print(data)
 
-data = ?
+diagram =go.Pie (
+    values=list(data.keys()),
+    labels=list(data.values())
+)
 
-diagram = ?
-
-fig = ?
-
-plotly.offline.plot(?)
+plotly.offline.plot(go.Figure[diagram],filename='task5.html')

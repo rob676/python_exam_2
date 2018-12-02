@@ -46,7 +46,7 @@ def getMark():
     #записуєм числа і перевіряємо їх
     mark=input()
     list_mark=[]
-    if mark.isnum()==True:
+    if mark.isdigit()==True:
         mark=int(mark)
         list_mark.append(mark)
         return list_mark
